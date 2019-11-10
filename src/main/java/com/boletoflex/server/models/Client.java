@@ -35,7 +35,7 @@ public class Client {
     private String telNumber;
     private String comNumber;
     private String email;
-    @Column(length = 102400)
+    @Column(length = 1024000)
     private String image;
     private Date register = Date.from(LocalDateTime.now().atZone(ZoneId.ofOffset("UTC", ZoneOffset.of("-00:00"))).toInstant());
 

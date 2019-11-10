@@ -20,13 +20,13 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public List<Client> findAllClient() {
-        logger.debug(String.format("Buscando todos Cliente"));
+        logger.info(String.format("Buscando todos os Clientes"));
         return clientRepository.findAll();
     }
 
     @Override
     public Client save(Client client) throws Exception {
-        logger.debug(String.format("Criando Cliente [%s]", client.getName()));
+        logger.info(String.format("Criando Cliente [%s]", client.getName()));
         return clientRepository.save(client);
     }
 }

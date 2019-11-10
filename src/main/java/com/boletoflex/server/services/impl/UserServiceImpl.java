@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> findByUsername(String username) {
-        logger.debug(String.format("Buscando usuário [%s]", username));
+        logger.info(String.format("Buscando usuário [%s]", username));
         return userRepository.findByUsername(username);
     }
 }

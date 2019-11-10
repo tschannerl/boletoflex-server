@@ -27,6 +27,7 @@ public class ClientController {
     @GetMapping()
     public ResponseEntity<List<Client>> findAllClients(){
         try{
+            logger.info("Iniciando a busca de todos os clientes");
             List<Client> clientList = clientService.findAllClient();
             return ResponseEntity.ok().body(clientList);
         }catch (Exception e){
