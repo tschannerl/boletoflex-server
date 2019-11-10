@@ -1,1 +1,1 @@
-insert into tb_user(username,password) values('admin', '1');
+insert into tb_user(username,password) values('admin', '123');
