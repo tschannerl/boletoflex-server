@@ -25,3 +25,10 @@ Utiliza requisições aos endpoints com credenciais básica de autenticação (u
 Contem uma tabela de usuário, que ao subir a aplicação cria um usuário "admin" com senha "123" que será usado pela aplicação Client.
 O bando de dados H2 está limitado a memória, ou seja, os dados serão persistidos e permanentes somente na etapa de execução do Server, após reiniciar os dados serão apagados.
 As imagens são gravadas no Banco de Dados.
+
+
+# Observações
+Caso não seja possível as execuções do Client e Server, poderei passar as instruções para a execução de toda a aplicação em um servidor de aplicação WEB [WildFly](https://wildfly.org/), utilizando Docker e toda a compilação em GRADLE.
+
+`docker run -it -p 8080:8080 -p 443:8443 -p 9990:9990 -v /[path]/wildfly/deployments/:/opt/jboss/wildfly/standalone/deployments/:rw --name wildfly wildfly:16`
+
