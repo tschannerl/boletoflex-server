@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -26,7 +27,13 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public Client save(Client client) throws Exception {
-        logger.info(String.format("Criando Cliente [%s]", client.getName()));
+        logger.info(String.format("Salvando o Cliente [%s]", client.getName()));
         return clientRepository.save(client);
+    }
+
+    @Override
+    public Optional<Client> findById(Long id) {
+        logger.info(String.format("Buscando Cliente por id [%d]", id));
+        return clientRepository.findById(id);
     }
 }
